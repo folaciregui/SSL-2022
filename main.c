@@ -32,8 +32,8 @@ int main(){
         else{
             caracter = caracter;
         }
-        printf("%c",caracter);
-        
+        putchar(caracter);
+            
         caracter = getchar();
         
     }
