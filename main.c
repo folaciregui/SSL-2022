@@ -13,30 +13,27 @@ Nuestro programa debe leer de a 1 carácter y escribir en la salida:
 
 int main(){
 
-    char caracter;
+    int c;
 
     printf("Ingrese cadena de caracteres: ");
-    caracter = getchar();
 
-    while (caracter != '\n'){ 
+    while ((c = getchar()) != EOF){ 
         
-        if (isupper(caracter)){
-            caracter = tolower(caracter);
+        if (isupper(c)){
+            putchar (tolower(c));
         }
-        else if(islower(caracter)){
-            caracter = toupper(caracter);
+        if(islower(c)){
+            putchar (toupper(c));
         }
-        else if(isdigit(caracter)){
-            caracter = '\0';
+        if(isspace(c)){
+            putchar(c);
         }
-        else{
-            caracter = caracter;
+        if (ispunct(c)){
+            putchar(c);
         }
-        putchar(caracter);
-            
-        caracter = getchar();
         
     }
 
    return 0;
 }
+
